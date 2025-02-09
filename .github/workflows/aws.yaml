@@ -31,6 +31,7 @@ jobs:
                 aws_secret_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
                 application_name: Encryption API
                 environment_name: EncryptionAPI-env 
-                version_description: ${{github.run_id}}
+                version_description: "v1-${{github.run_id}}-${{github.run_number}}"
                 region: eu-north-1
                 deployment_package: site.zip
+                version_labels: "v1-${{github.run_id}}-${{github.run_number}}"
